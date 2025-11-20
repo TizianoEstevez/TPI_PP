@@ -1,0 +1,38 @@
+package Controller;
+
+import Interfaz.*;
+import javax.swing.SwingUtilities;
+
+public class ControladorPrincipal {
+
+    private Inicio vista;
+
+    public void mostrar() {
+        SwingUtilities.invokeLater(() -> {
+            vista = new Inicio();
+            vista.setLocationRelativeTo(null);
+            vista.setVisible(true);
+
+            configurarEventos();
+        });
+    }
+
+    private void configurarEventos() {
+
+        vista.getBtnAdministrarCuenta().addActionListener(e -> {
+            vista.dispose(); // cerrar
+            // Acá iría: new ControladorCuenta().mostrar();
+            System.out.println("Abrir gestión de cuentas...");
+        });
+
+        vista.getBtnAdministrarEstacionamiento().addActionListener(e -> {
+            vista.dispose(); // cerrar ventana actual
+            // Acá iría: new ControladorEstacionamiento().mostrar();
+            System.out.println("Abrir gestión de estacionamiento...");
+        });
+    }
+
+    public static void main(String[] args) {
+        new ControladorPrincipal().mostrar();
+    }
+}
