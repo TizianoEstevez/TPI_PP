@@ -2,6 +2,8 @@ package Interfaz;
 import javax.swing.*;
 
 public class RecargarSaldo extends JFrame {
+    private JButton btnRecargar;
+
     public RecargarSaldo() {
         setTitle("Recargar Saldo");
         setSize(400, 300);
@@ -20,9 +22,13 @@ public class RecargarSaldo extends JFrame {
         add(txtCantidad);
         txtCantidad.setBounds(200, 70, 100, 25);
 
-        JButton btnRecargar = new JButton("Recargar");
+        btnRecargar = new JButton("Recargar");
         add(btnRecargar);
         btnRecargar.setBounds(150, 120, 100, 30);
+    }
+    
+    public JButton getBtnRecargar() {
+        return btnRecargar;
     }
     
 }

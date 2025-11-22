@@ -4,6 +4,8 @@ import javax.swing.*;
 import Modelos.UsuarioInterno;
 
 public class CrearCuenta extends JFrame {
+    private JButton btnCrear;
+
     public CrearCuenta() {
         setTitle("Crear Cuenta");
         setSize(500, 500);
@@ -38,8 +40,12 @@ public class CrearCuenta extends JFrame {
         add(txtModelo);
         txtModelo.setBounds(150, 150, 200, 25);
 
-        JButton btnCrear = new JButton("Crear Cuenta");
+        btnCrear = new JButton("Crear Cuenta");
         add(btnCrear);
         btnCrear.setBounds(150, 200, 120, 30);
+    }
+
+    public JButton getBtnCrear() {
+        return btnCrear;
     }
 }

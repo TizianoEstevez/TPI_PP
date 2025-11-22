@@ -1,6 +1,8 @@
 package Interfaz;
 import javax.swing.*;
 public class RetirarVehiculo extends JFrame {
+    private JButton btnRetirar;
+
     public RetirarVehiculo() {
         setTitle("Retirar Vehículo");
         setSize(400, 300);
@@ -19,9 +21,12 @@ public class RetirarVehiculo extends JFrame {
         add(txtPatente);
         txtPatente.setBounds(200, 70, 150, 25);
 
-        JButton btnRetirar = new JButton("Retirar Vehículo");
+        btnRetirar = new JButton("Retirar Vehículo");
         add(btnRetirar);
         btnRetirar.setBounds(130, 120, 150, 30);
     }
      
+    public JButton getBtnRetirar() {
+        return btnRetirar;
+    }
 }

@@ -2,6 +2,9 @@ package Interfaz;
 import javax.swing.*;
 
 public class MenuPrincipal extends JFrame {
+    private JButton btnCrearCuenta;
+    private JButton btnRecargarSaldo;
+
     public MenuPrincipal(){
         setTitle("Menu Principal");
         setSize(400, 250);
@@ -12,20 +15,22 @@ public class MenuPrincipal extends JFrame {
         titulo.setBounds(100, 20, 200, 30);
         add(titulo);
 
-        JButton btnCrearCuenta = new JButton("Crear Cuenta");
+        btnCrearCuenta = new JButton("Crear Cuenta");
         btnCrearCuenta.setBounds(125, 70, 150, 30);
         add(btnCrearCuenta);
 
-        btnCrearCuenta.addActionListener(e -> {
-            CrearCuenta crearCuentaFrame = new CrearCuenta();
-            crearCuentaFrame.setVisible(true);
-        });
-
-        JButton btnRecargarSaldo = new JButton("Recargar Saldo");
+        btnRecargarSaldo = new JButton("Recargar Saldo");
         btnRecargarSaldo.setBounds(125, 110, 150, 30);
         add(btnRecargarSaldo);
 
-
-
     }
+
+    public JButton getBtnCrearCuenta() {
+        return btnCrearCuenta;
+    }
+
+    public JButton getBtnRecargarSaldo() {
+        return btnRecargarSaldo;
+    }
+
 }

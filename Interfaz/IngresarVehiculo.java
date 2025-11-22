@@ -3,6 +3,8 @@ import javax.swing.*;
 
 import Modelos.Plaza;
 public class IngresarVehiculo extends JFrame{
+    private JButton btnIngresar;
+
     public IngresarVehiculo(){
         setTitle("Ingresar Vehículo");
         setSize(400, 300);
@@ -29,9 +31,12 @@ public class IngresarVehiculo extends JFrame{
         add(cmbPlazas);
         cmbPlazas.setBounds(200, 110, 100, 25);
 
-        JButton btnIngresar = new JButton("Ingresar Vehículo");
+        btnIngresar = new JButton("Ingresar Vehículo");
         add(btnIngresar);
         btnIngresar.setBounds(130, 160, 150, 30);
     }
     
+    public JButton getBtnIngresar() {
+        return btnIngresar;
+    }
 }

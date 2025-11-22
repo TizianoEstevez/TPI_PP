@@ -2,6 +2,9 @@ package Interfaz;
 import javax.swing.*;
 
 public class MenuEstacionamiento extends JFrame{
+    private JButton btnIngresarVehiculo;
+    private JButton btnRetirarVehiculo;
+
     public MenuEstacionamiento(){
         setTitle("Menu Estacionamiento");
         setSize(400, 250);
@@ -12,12 +15,20 @@ public class MenuEstacionamiento extends JFrame{
         titulo.setBounds(100, 20, 200, 30);
         add(titulo);
 
-        JButton btnIngresarVehiculo = new JButton("Ingresar Vehículo");
+        btnIngresarVehiculo = new JButton("Ingresar Vehículo");
         btnIngresarVehiculo.setBounds(125, 70, 150, 30);
         add(btnIngresarVehiculo);
 
-        JButton btnRetirarVehiculo = new JButton("Retirar Vehículo");
+        btnRetirarVehiculo = new JButton("Retirar Vehículo");
         btnRetirarVehiculo.setBounds(125, 110, 150, 30);
         add(btnRetirarVehiculo);
+    }
+
+    public JButton getBtnIngresarVehiculo() {
+        return btnIngresarVehiculo;
+    }
+
+    public JButton getBtnRetirarVehiculo() {
+        return btnRetirarVehiculo;
     }
 }
