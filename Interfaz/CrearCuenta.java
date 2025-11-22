@@ -5,6 +5,9 @@ import Modelos.UsuarioInterno;
 
 public class CrearCuenta extends JFrame {
     private JButton btnCrear;
+    private JComboBox<Modelos.UsuarioInterno> cmbUsuarios;
+    private JTextField txtPatente;
+    private JTextField txtModelo;
 
     public CrearCuenta() {
         setTitle("Crear Cuenta");
@@ -20,7 +23,7 @@ public class CrearCuenta extends JFrame {
         add(lblUsuario);
         lblUsuario.setBounds(50, 70, 100, 25);
 
-        JComboBox<UsuarioInterno> cmbUsuarios = new JComboBox<>();
+        cmbUsuarios = new JComboBox<>();
         add(cmbUsuarios);
         cmbUsuarios.setBounds(150, 70, 200, 25);
 
@@ -28,7 +31,7 @@ public class CrearCuenta extends JFrame {
         add(lblPatente);
         lblPatente.setBounds(50, 110, 100, 25);
 
-        JTextField txtPatente = new JTextField();
+        txtPatente = new JTextField();
         add(txtPatente);
         txtPatente.setBounds(150, 110, 200, 25);
 
@@ -36,7 +39,7 @@ public class CrearCuenta extends JFrame {
         add(lblModelo);
         lblModelo.setBounds(50, 150, 100, 25);
 
-        JTextField txtModelo = new JTextField();
+        txtModelo = new JTextField();
         add(txtModelo);
         txtModelo.setBounds(150, 150, 200, 25);
 
@@ -47,5 +50,17 @@ public class CrearCuenta extends JFrame {
 
     public JButton getBtnCrear() {
         return btnCrear;
+    }
+
+    public JComboBox<Modelos.UsuarioInterno> getCmbUsuarios() {
+        return cmbUsuarios;
+    }
+
+    public JTextField getTxtPatente() {
+        return txtPatente;
+    }
+
+    public JTextField getTxtModelo() {
+        return txtModelo;
     }
 }

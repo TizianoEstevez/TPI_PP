@@ -20,9 +20,8 @@ public class ControladorPrincipal {
     private void configurarEventos() {
 
         vista.getBtnAdministrarCuenta().addActionListener(e -> {
-            vista.dispose(); // cerrar
-            // Acá iría: new ControladorCuenta().mostrar();
-            System.out.println("Abrir gestión de cuentas...");
+            vista.dispose(); 
+            new ControladorCuenta().mostrarMenuPrincipal();
         });
 
         vista.getBtnAdministrarEstacionamiento().addActionListener(e -> {
